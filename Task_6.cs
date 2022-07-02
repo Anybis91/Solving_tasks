@@ -13,8 +13,8 @@ namespace Task_6
             Console.WriteLine("Сколько кристалов желаете приобрести?");
             int cristalAmount;
             cristalAmount = Convert.ToInt32(Console.ReadLine());
-            int cristalbought= goldPocket-(cristalAmount*cristalPrice);
-            Console.WriteLine($"Вы купили {cristalAmount} кристалов, у вас осталось {cristalbought} золота.");
+            goldPocket = goldPocket-(cristalAmount*cristalPrice);
+            Console.WriteLine($"Вы купили {cristalAmount} кристалов, у вас осталось {goldPocket} золота.");
 
 
         }
