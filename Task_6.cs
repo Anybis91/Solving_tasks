@@ -6,15 +6,17 @@ namespace Task_6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Доброго дня покупатель! Хотите прикупить кристалов?! Напомню что в моей лавке 1 кристал по цене 42 золотых! А сколько у вас золота?");
+            int cristalPrice = 42;
+            Console.WriteLine($"Доброго дня покупатель! Хотите прикупить кристалов?! Напомню что в моей лавке 1 кристал по цене {cristalPrice} золотых! А сколько у вас золота?");
             int goldPocket;
             goldPocket = Convert.ToInt32(Console.ReadLine());
-            int cristalPrice = 42;
-            int remainingGold;
-            int cristalNum;
-            cristalNum = goldPocket / cristalPrice;
-            remainingGold = goldPocket % cristalPrice;
-            Console.WriteLine("Могу продать вам " + cristalNum + " шт. И у вас останется " + remainingGold + " золота!");
+            Console.WriteLine("Сколько кристалов желаете приобрести?");
+            int cristalAmount;
+            cristalAmount = Convert.ToInt32(Console.ReadLine());
+            int cristalbought= goldPocket-(cristalAmount*cristalPrice);
+            Console.WriteLine($"Вы купили {cristalAmount} кристалов, у вас осталось {cristalbought} золота.");
+
+
         }
     }
 }
