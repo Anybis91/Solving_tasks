@@ -10,11 +10,12 @@ namespace Task_7
             int amountGrandmam;
             amountGrandmam = Convert.ToInt32(Console.ReadLine());
             int receptionTimeClient = 10;
-            int timeWaitHour;
-            timeWaitHour = (amountGrandmam * receptionTimeClient) / 60;
-            int timeWaitMin;
-            timeWaitMin = (amountGrandmam * receptionTimeClient) % 60;
-            Console.WriteLine("Вы должны отстоять в очереди " + timeWaitHour + " часа " + timeWaitMin + " минут.");
+            int receptionTimePlayer = amountGrandmam * receptionTimeClient;
+            int timeHour = 60;
+            int timeMinute = 60;
+            int timeWaitHour = receptionTimePlayer / timeHour;
+            int timeWaitMinute = receptionTimePlayer % timeMinute;
+            Console.WriteLine($"Вы должны отстоять в очереди {timeWaitHour} часа {timeWaitMinute} минут.");
         }
     }
 }
