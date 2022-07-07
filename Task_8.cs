@@ -11,7 +11,7 @@ namespace Task_8
 			Console.WriteLine("Введите сообщение:");
 			String textUser = Console.ReadLine();
 			Console.WriteLine("Цикл запущен:");
-			while (cycleAmount-- > 0)
+			for (int amountCycle= cycleAmount; amountCycle > 0; amountCycle--)
 			{
 				Console.WriteLine(textUser);
 			}
