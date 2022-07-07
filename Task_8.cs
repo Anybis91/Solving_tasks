@@ -13,7 +13,7 @@ namespace Task_8
 			Console.WriteLine("Цикл запущен:");
 				for (int amountCycle= cycleAmount; amountCycle > 0; amountCycle--)
 					{
-					Console.WriteLine(textUser);
+						Console.WriteLine(textUser);
 					}
 		}
 	}
