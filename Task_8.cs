@@ -11,11 +11,10 @@ namespace Task_8
 			Console.WriteLine("Введите сообщение:");
 			String textUser = Console.ReadLine();
 			Console.WriteLine("Цикл запущен:");
-			for (int amountCycle= cycleAmount; amountCycle > 0; amountCycle--)
-				{
-				Console.WriteLine(textUser);
-				}
-
+				for (int amountCycle= cycleAmount; amountCycle > 0; amountCycle--)
+					{
+					Console.WriteLine(textUser);
+					}
 		}
 	}
 }
