@@ -12,9 +12,9 @@ namespace Task_8
 			String textUser = Console.ReadLine();
 			Console.WriteLine("Цикл запущен:");
 			for (int amountCycle= cycleAmount; amountCycle > 0; amountCycle--)
-			{
+				{
 				Console.WriteLine(textUser);
-			}
+				}
 
 		}
 	}
