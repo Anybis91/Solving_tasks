@@ -6,20 +6,20 @@ namespace Task_9_1_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите exit для выхода.");
             string userInput;
             int amountCycle;
             string exitCommand = "exit";
-            bool cycleIsEnd=true;
+            bool isWork = true;
+            Console.WriteLine($"Введите {exitCommand} для выхода.");
 
-            while(cycleIsEnd)
+            while(isWork)
             {
                 userInput=Console.ReadLine();
 
                 if (userInput==exitCommand)
                 {
                     Console.WriteLine("Цикл завершён!");
-                    break;
+                    isWork=false;
                 }
                 else
                 {
