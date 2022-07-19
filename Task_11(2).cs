@@ -4,7 +4,7 @@ public class Program
 {
 	public static void Main()
 	{
-		int startNumber = 0;
+		int startNumber=0;
 		int endNumber = 101;
 		Random random = new Random();
 		int randomNumber = random.Next(startNumber, endNumber);
@@ -14,7 +14,7 @@ public class Program
 		int sumOfMultiplesOne=0;
 		int sumOfMultiplesTwo=0;
 
-		while (startNumber<= randomNumber) 
+		for (startNumber=0; startNumber <= randomNumber; startNumber++) 
 		{
 			if (startNumber % multipleNumberOne == 0)
 			{
@@ -24,9 +24,9 @@ public class Program
 			{
 				sumOfMultiplesTwo += startNumber;
 			}
-			startNumber++;
 		}
+
 		int sumOfAllMultiplesNumber = sumOfMultiplesTwo + sumOfMultiplesOne;
-		Console.WriteLine("Сумма чисел кратны 3 и 5  = " + sumOfAllMultiplesNumber);
+		Console.WriteLine($"Сумма чисел кратны {multipleNumberOne} и {multipleNumberTwo} = {sumOfAllMultiplesNumber}");
 	}
 }
