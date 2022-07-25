@@ -17,11 +17,14 @@ namespace Task_12
             float cnyAmount;
             string userInput;
             float userWantConvert;
-            bool isWork = true;
+            bool isWorkFirstSection = true;
+            bool isWorkSecondSection = true;
+            bool isWorkThirdSection = true;
+            bool isWorkMainSection = true;
             string exitCommand = "выход";
             string backCommand = "назад";
 
-            while (isWork)
+            while (isWorkMainSection)
             {
                 Console.Write("Выбирите необходимую операцию:\nКонвертер - Обмен различных валют.\nДанные - доступ к библиотеке.\nНастройка - настройка консоли.\nДля выхода введите 'выход'.\n");
                 userInput = Console.ReadLine();
@@ -29,7 +32,7 @@ namespace Task_12
                 if (userInput == exitCommand)
                 {
                     Console.Write("Всего доброго!");
-                    isWork = false;
+                    isWorkMainSection = false;
                 }
                 else
                 {
@@ -44,7 +47,7 @@ namespace Task_12
                             Console.Write("Введите сумму доступных средств в юанях:");
                             cnyAmount = Convert.ToSingle(Console.ReadLine());
 
-                            while (isWork)
+                            while (isWorkFirstSection)
                             {
                                 Console.Write("Выбирите необходимую операцию:\n 1 - Обмен рублей на доллары.\n 2 - Обмен долларов на рубли." +
                                     "\n 3 - Обмен юаней на рубли.\n 4 - Обмен долларов на юани.\n 5 - Обмен рублей на юани." +
@@ -54,7 +57,7 @@ namespace Task_12
                                 if (userInput == backCommand)
                                 {
                                     Console.Write("Всего доброго!\n");
-                                    isWork = false;
+                                    isWorkFirstSection = false;
                                 }
                                 else
                                 {
@@ -165,7 +168,7 @@ namespace Task_12
                             string userInputName;
                             string userInputPassword;
 
-                            while (isWork)
+                            while (isWorkSecondSection)
                             {
                                 Console.WriteLine("Доброго дня!\nЭто база данных пользователя, в этом разделе вы можите ввести логин, пароль и данные.\nДля выхода в главный раздел введите 'назад'.\nДля продолженния нажмите лювую клавишу:\n");
                                 userInput = Console.ReadLine();
@@ -173,7 +176,7 @@ namespace Task_12
                                 if (userInput == backCommand)
                                 {
                                     Console.Write("Всего доброго!");
-                                    isWork = false;
+                                    isWorkSecondSection = false;
                                 }
                                 else
                                 {
@@ -221,7 +224,7 @@ namespace Task_12
                         case "Настройка":
                             Console.WriteLine("Доброго дня! Вас приветствует настройка консоли!");
 
-                            while (isWork)
+                            while (isWorkThirdSection)
                             {
                                 Console.Write("1 - Смена цвета текста в консоли.\n2 - Смена фона консоли." +
                                     "\nДля выхода в главный раздел введите 'назад'.\n");
@@ -230,7 +233,7 @@ namespace Task_12
                                 if (userInput == backCommand)
                                 {
                                     Console.Write("Всего доброго!\n");
-                                    isWork = false;
+                                    isWorkThirdSection = false;
                                 }
                                 else
                                 {
