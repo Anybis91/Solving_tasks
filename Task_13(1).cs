@@ -29,7 +29,7 @@ namespace Task_12
                 if (userInput == exitCommand)
                 {
                     Console.Write("Всего доброго!");
-                    break;
+                    isWork = false;
                 }
                 else
                 {
@@ -54,7 +54,7 @@ namespace Task_12
                                 if (userInput == backCommand)
                                 {
                                     Console.Write("Всего доброго!\n");
-                                    break;
+                                    isWork = false;
                                 }
                                 else
                                 {
@@ -170,10 +170,10 @@ namespace Task_12
                                 Console.WriteLine("Доброго дня!\nЭто база данных пользователя, в этом разделе вы можите ввести логин, пароль и данные.\nДля выхода в главный раздел введите 'назад'.\nДля продолженния нажмите лювую клавишу:\n");
                                 userInput = Console.ReadLine();
 
-                                if (userInput == exitCommand)
+                                if (userInput == backCommand)
                                 {
                                     Console.Write("Всего доброго!");
-                                    break;
+                                    isWork = false;
                                 }
                                 else
                                 {
@@ -230,7 +230,7 @@ namespace Task_12
                                 if (userInput == backCommand)
                                 {
                                     Console.Write("Всего доброго!\n");
-                                    break;
+                                    isWork = false;
                                 }
                                 else
                                 {
