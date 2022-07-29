@@ -7,11 +7,13 @@ namespace Task_15
         static void Main(string[] args)
         {
             int numberAttempts=3;
+            int useNumberAttempts = 1;
             string basePassword="873456";
             string userInputPassword;
             string baseinfo = "Секретная информация:\nБулочки были выпечены в подвале в Москве.";
+            bool isWork = true;
 
-            for (int i=0; i<numberAttempts; i++)
+            while (isWork)
             {
                 Console.WriteLine("Введите пароль для доступа к данным:");
                 userInputPassword = Console.ReadLine();
@@ -19,11 +21,20 @@ namespace Task_15
                 if (userInputPassword == basePassword)
                 {
                     Console.WriteLine(baseinfo);
-                    break;
+                    isWork = false;
                 }
                 else
                 {
-                    Console.WriteLine("Неверный пароль! Осталось " + (numberAttempts-i-1) + " попыток!");
+                    if (numberAttempts <= 0)
+                    {
+                        Console.WriteLine("У вас не осталось попыток!\nВсего доброго!");
+                        isWork = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неверный пароль! Осталось " + (numberAttempts) + " попыток!");
+                        numberAttempts = numberAttempts - useNumberAttempts;
+                    }
                 }
             }
         }
